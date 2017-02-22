@@ -76,13 +76,4 @@ public class FWatchService {
         // 重置并继续监控
         return signal.reset();
     }
-
-    @PreDestroy
-    private void destroy(){
-        try {
-            watchService.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
 }
