@@ -158,6 +158,12 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
+					<requiresUnpack>
+						<dependency>
+							<groupId>org.jruby</groupId>
+							<artifactId>jruby-complete</artifactId>
+						</dependency>
+					</requiresUnpack>
 					<jvmArguments>-Dfile.encoding=UTF-8</jvmArguments>
 					<fork>true</fork>
 				</configuration>
