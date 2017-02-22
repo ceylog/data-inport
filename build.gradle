@@ -1,0 +1,54 @@
+buildscript {
+	ext {
+		springBootVersion = '1.5.1.RELEASE'
+	}
+	repositories {
+		mavenLocal()
+		maven { url "http://192.168.16.200:8081/nexus/content/groups/public" }
+		maven { url "http://maven.aliyun.com/nexus/content/groups/public" }
+		maven { url "https://repo.spring.io/libs-release" }
+		jcenter()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+
+jar {
+	baseName = 'data-inport'
+	version = '0.0.1'
+}
+
+sourceCompatibility = 1.8
+
+repositories {
+	mavenLocal()
+	maven { url "http://192.168.16.200:8081/nexus/content/groups/public" }
+	maven { url "http://maven.aliyun.com/nexus/content/groups/public" }
+	maven { url "https://repo.spring.io/libs-release" }
+	jcenter()
+}
+
+configurations {
+	all*.exclude group: 'ch.qos.logback'
+	all*.exclude module: 'tomcat-jdbc'
+	all*.exclude module: 'spring-boot-starter-tomcat'
+	all*.exclude module: 'spring-boot-starter-logging'
+}
+
+dependencies {
+	compile('org.mybatis.spring.boot:mybatis-spring-boot-starter:1.2.0')
+	compile("org.springframework.boot:spring-boot-devtools")
+	compile('tk.mybatis:mapper-spring-boot-starter:1.1.0')
+	compile('com.github.pagehelper:pagehelper-spring-boot-starter:1.1.0')
+	compile('com.alibaba:druid:1.0.28')
+	compile('mysql:mysql-connector-java')
+	compile('org.springframework.boot:spring-boot-starter-undertow')
+	compile('org.springframework.boot:spring-boot-starter-jersey')
+	compile('org.springframework.boot:spring-boot-starter-log4j2')
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+}
