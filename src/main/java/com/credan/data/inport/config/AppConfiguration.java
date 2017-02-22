@@ -3,14 +3,18 @@ package com.credan.data.inport.config;
 import com.alibaba.druid.support.http.StatViewServlet;
 import com.alibaba.druid.support.http.WebStatFilter;
 import org.mybatis.spring.annotation.MapperScan;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceBuilder;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 
+import javax.inject.Inject;
 import javax.sql.DataSource;
 
 /**
@@ -20,7 +24,12 @@ import javax.sql.DataSource;
  */
 @Configuration
 @MapperScan("com.credan.data.inport.dao")
-public class DruidConfiguration {
+public class AppConfiguration {
+
+    protected final Logger logger = LoggerFactory.getLogger(this.getClass());
+
+    @Inject
+    private ApplicationContext appCtx;
 
     /**
      * 注册一个StatViewServlet
