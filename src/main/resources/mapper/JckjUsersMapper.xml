@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.credan.data.inport.dao.JckjUsersMapper">
+  <resultMap id="BaseResultMap" type="com.credan.data.inport.entity.JckjUsers">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="USER_CODE" jdbcType="VARCHAR" property="userCode" />
+    <id column="USER_UNICODE" jdbcType="VARCHAR" property="userUnicode" />
+    <result column="USER_NAME" jdbcType="VARCHAR" property="userName" />
+    <result column="USER_SEX" jdbcType="VARCHAR" property="userSex" />
+    <result column="USER_BIRTHDAY" jdbcType="VARCHAR" property="userBirthday" />
+    <result column="SPELL" jdbcType="VARCHAR" property="spell" />
+    <result column="USER_PWD" jdbcType="VARCHAR" property="userPwd" />
+    <result column="DEPTID" jdbcType="VARCHAR" property="deptid" />
+    <result column="DEPTNAME" jdbcType="VARCHAR" property="deptname" />
+    <result column="USER_LEVEL" jdbcType="VARCHAR" property="userLevel" />
+    <result column="USER_MEMO" jdbcType="LONGVARCHAR" property="userMemo" />
+    <result column="USER_TITLE" jdbcType="LONGVARCHAR" property="userTitle" />
+  </resultMap>
+</mapper>

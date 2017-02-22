@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.credan.data.inport.dao.CoreWftransactionMapper">
+  <resultMap id="BaseResultMap" type="com.credan.data.inport.entity.CoreWftransaction">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="GUID" jdbcType="VARCHAR" property="guid" />
+    <result column="SRC_ACTINSTID" jdbcType="VARCHAR" property="srcActinstid" />
+    <result column="SRC_ACTDEFID" jdbcType="VARCHAR" property="srcActdefid" />
+    <result column="SRC_ACTDEFNAME" jdbcType="VARCHAR" property="srcActdefname" />
+    <result column="TARGET_ACTDEFID" jdbcType="VARCHAR" property="targetActdefid" />
+    <result column="TARGET_ACTDEFNAME" jdbcType="VARCHAR" property="targetActdefname" />
+    <result column="TARGET_ACTINSTID" jdbcType="VARCHAR" property="targetActinstid" />
+    <result column="PROCESSINSTID" jdbcType="VARCHAR" property="processinstid" />
+    <result column="PROCESSDEFID" jdbcType="VARCHAR" property="processdefid" />
+    <result column="CREATETIME" jdbcType="TIMESTAMP" property="createtime" />
+  </resultMap>
+</mapper>

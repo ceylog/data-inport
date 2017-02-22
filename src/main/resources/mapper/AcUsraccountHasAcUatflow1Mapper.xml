@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.credan.data.inport.dao.AcUsraccountHasAcUatflow1Mapper">
+  <resultMap id="BaseResultMap" type="com.credan.data.inport.entity.AcUsraccountHasAcUatflow1">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="ac_usrAccount_idac_usrAccount" jdbcType="INTEGER" property="acUsraccountIdacUsraccount" />
+    <id column="ac_uatFlow_idac_uatFlow" jdbcType="INTEGER" property="acUatflowIdacUatflow" />
+  </resultMap>
+</mapper>

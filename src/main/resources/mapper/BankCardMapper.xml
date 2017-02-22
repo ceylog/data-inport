@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.credan.data.inport.dao.BankCardMapper">
+  <resultMap id="BaseResultMap" type="com.credan.data.inport.entity.BankCard">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="user_id" jdbcType="VARCHAR" property="userId" />
+    <result column="card_number" jdbcType="VARCHAR" property="cardNumber" />
+    <result column="cvv" jdbcType="VARCHAR" property="cvv" />
+    <result column="linked_phone" jdbcType="VARCHAR" property="linkedPhone" />
+    <result column="last_updated" jdbcType="TIMESTAMP" property="lastUpdated" />
+    <result column="type" jdbcType="INTEGER" property="type" />
+    <result column="date_created" jdbcType="TIMESTAMP" property="dateCreated" />
+    <result column="status_bit" jdbcType="INTEGER" property="statusBit" />
+    <result column="select_password" jdbcType="VARCHAR" property="selectPassword" />
+  </resultMap>
+</mapper>

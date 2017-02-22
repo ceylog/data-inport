@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.credan.data.inport.dao.UserProviderScoreMapper">
+  <resultMap id="BaseResultMap" type="com.credan.data.inport.entity.UserProviderScore">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="user_id" jdbcType="VARCHAR" property="userId" />
+    <id column="datasource_id" jdbcType="INTEGER" property="datasourceId" />
+    <result column="score" jdbcType="INTEGER" property="score" />
+    <result column="error_code" jdbcType="INTEGER" property="errorCode" />
+    <result column="last_updated" jdbcType="TIMESTAMP" property="lastUpdated" />
+    <result column="date_created" jdbcType="TIMESTAMP" property="dateCreated" />
+    <result column="active" jdbcType="BIT" property="active" />
+    <result column="report_id" jdbcType="VARCHAR" property="reportId" />
+    <result column="device_id" jdbcType="VARCHAR" property="deviceId" />
+    <result column="callback_status" jdbcType="BIT" property="callbackStatus" />
+    <result column="called_times" jdbcType="INTEGER" property="calledTimes" />
+    <result column="raw_data" jdbcType="LONGVARCHAR" property="rawData" />
+    <result column="hit_rules" jdbcType="LONGVARCHAR" property="hitRules" />
+  </resultMap>
+</mapper>

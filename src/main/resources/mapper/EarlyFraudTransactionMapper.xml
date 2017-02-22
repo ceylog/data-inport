@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.credan.data.inport.dao.EarlyFraudTransactionMapper">
+  <resultMap id="BaseResultMap" type="com.credan.data.inport.entity.EarlyFraudTransaction">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="user_id" jdbcType="VARCHAR" property="userId" />
+    <result column="merchant_id" jdbcType="VARCHAR" property="merchantId" />
+    <result column="decision" jdbcType="VARCHAR" property="decision" />
+    <result column="phone" jdbcType="VARCHAR" property="phone" />
+    <result column="id_num" jdbcType="VARCHAR" property="idNum" />
+    <result column="card_num" jdbcType="VARCHAR" property="cardNum" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="created_time" jdbcType="TIMESTAMP" property="createdTime" />
+    <result column="last_updated" jdbcType="TIMESTAMP" property="lastUpdated" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.credan.data.inport.dao.CiInstallmentProjectMapper">
+  <resultMap id="BaseResultMap" type="com.credan.data.inport.entity.CiInstallmentProject">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="user_id" jdbcType="VARCHAR" property="userId" />
+    <result column="order_amount" jdbcType="DECIMAL" property="orderAmount" />
+    <result column="installment_amount" jdbcType="DECIMAL" property="installmentAmount" />
+    <result column="term" jdbcType="INTEGER" property="term" />
+    <result column="monthly_repay" jdbcType="DECIMAL" property="monthlyRepay" />
+    <result column="monthly_fee" jdbcType="DECIMAL" property="monthlyFee" />
+    <result column="daily_fee" jdbcType="DECIMAL" property="dailyFee" />
+    <result column="next_term" jdbcType="INTEGER" property="nextTerm" />
+    <result column="next_repayday" jdbcType="CHAR" property="nextRepayday" />
+    <result column="audit_status" jdbcType="CHAR" property="auditStatus" />
+    <result column="audit_date" jdbcType="TIMESTAMP" property="auditDate" />
+    <result column="status" jdbcType="CHAR" property="status" />
+    <result column="overdue_day" jdbcType="INTEGER" property="overdueDay" />
+    <result column="description" jdbcType="VARCHAR" property="description" />
+    <result column="version" jdbcType="INTEGER" property="version" />
+    <result column="created_time" jdbcType="TIMESTAMP" property="createdTime" />
+    <result column="last_updated" jdbcType="TIMESTAMP" property="lastUpdated" />
+    <result column="merchant_id" jdbcType="VARCHAR" property="merchantId" />
+    <result column="agent_id" jdbcType="VARCHAR" property="agentId" />
+    <result column="product_code" jdbcType="INTEGER" property="productCode" />
+  </resultMap>
+</mapper>

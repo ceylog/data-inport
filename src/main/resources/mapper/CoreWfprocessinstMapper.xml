@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.credan.data.inport.dao.CoreWfprocessinstMapper">
+  <resultMap id="BaseResultMap" type="com.credan.data.inport.entity.CoreWfprocessinst">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="PROCESSINSTID" jdbcType="VARCHAR" property="processinstid" />
+    <result column="PROCESSINSTNAME" jdbcType="VARCHAR" property="processinstname" />
+    <result column="CREATEMAN" jdbcType="VARCHAR" property="createman" />
+    <result column="CREATETIME" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="CURRENTSTATE" jdbcType="VARCHAR" property="currentstate" />
+    <result column="PRIORITY" jdbcType="DOUBLE" property="priority" />
+    <result column="STARTTIME" jdbcType="TIMESTAMP" property="starttime" />
+    <result column="ENDTIME" jdbcType="TIMESTAMP" property="endtime" />
+    <result column="REMINDTIME" jdbcType="TIMESTAMP" property="remindtime" />
+    <result column="FINALTIME" jdbcType="TIMESTAMP" property="finaltime" />
+    <result column="PARENTPROCID" jdbcType="VARCHAR" property="parentprocid" />
+    <result column="PARENTACTID" jdbcType="VARCHAR" property="parentactid" />
+    <result column="ISTIMEOUT" jdbcType="VARCHAR" property="istimeout" />
+    <result column="CID" jdbcType="VARCHAR" property="cid" />
+    <result column="PROCESSDEFID" jdbcType="VARCHAR" property="processdefid" />
+    <result column="CREATEMAN_NAME" jdbcType="VARCHAR" property="createmanName" />
+    <result column="TIMEOUT" jdbcType="DECIMAL" property="timeout" />
+    <result column="PROCESSINSTDESC" jdbcType="LONGVARCHAR" property="processinstdesc" />
+    <result column="RELATEDATA" jdbcType="LONGVARCHAR" property="relatedata" />
+    <result column="PROCESSDEFDATA" jdbcType="LONGVARCHAR" property="processdefdata" />
+  </resultMap>
+</mapper>

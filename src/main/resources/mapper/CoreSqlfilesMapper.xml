@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.credan.data.inport.dao.CoreSqlfilesMapper">
+  <resultMap id="BaseResultMap" type="com.credan.data.inport.entity.CoreSqlfiles">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="SQLFILE_ID" jdbcType="VARCHAR" property="sqlfileId" />
+    <result column="SQLFILE_DS" jdbcType="VARCHAR" property="sqlfileDs" />
+    <result column="SQLFILE_URL" jdbcType="VARCHAR" property="sqlfileUrl" />
+    <result column="SQLFILE_STOP" jdbcType="DOUBLE" property="sqlfileStop" />
+    <result column="SQLFILE_SYS" jdbcType="VARCHAR" property="sqlfileSys" />
+    <result column="SQLFILE_REMARK" jdbcType="LONGVARCHAR" property="sqlfileRemark" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.credan.data.inport.dao.AcMerchantconfigIMapper">
+  <resultMap id="BaseResultMap" type="com.credan.data.inport.entity.AcMerchantconfigI">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="idmerchantConfig" jdbcType="VARCHAR" property="idmerchantconfig" />
+    <result column="rebateRate" jdbcType="DECIMAL" property="rebaterate" />
+    <result column="startTime" jdbcType="TIMESTAMP" property="starttime" />
+    <result column="endTime" jdbcType="TIMESTAMP" property="endtime" />
+    <result column="cooperMode" jdbcType="VARCHAR" property="coopermode" />
+    <result column="createTime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="updateTime" jdbcType="TIMESTAMP" property="updatetime" />
+    <result column="availableFlag" jdbcType="VARCHAR" property="availableflag" />
+    <result column="idmerchant" jdbcType="VARCHAR" property="idmerchant" />
+    <result column="payType" jdbcType="VARCHAR" property="paytype" />
+  </resultMap>
+</mapper>

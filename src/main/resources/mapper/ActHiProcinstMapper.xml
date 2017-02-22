@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.credan.data.inport.dao.ActHiProcinstMapper">
+  <resultMap id="BaseResultMap" type="com.credan.data.inport.entity.ActHiProcinst">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="ID_" jdbcType="VARCHAR" property="id" />
+    <result column="PROC_INST_ID_" jdbcType="VARCHAR" property="procInstId" />
+    <result column="BUSINESS_KEY_" jdbcType="VARCHAR" property="businessKey" />
+    <result column="PROC_DEF_ID_" jdbcType="VARCHAR" property="procDefId" />
+    <result column="START_TIME_" jdbcType="TIMESTAMP" property="startTime" />
+    <result column="END_TIME_" jdbcType="TIMESTAMP" property="endTime" />
+    <result column="DURATION_" jdbcType="BIGINT" property="duration" />
+    <result column="START_USER_ID_" jdbcType="VARCHAR" property="startUserId" />
+    <result column="START_ACT_ID_" jdbcType="VARCHAR" property="startActId" />
+    <result column="END_ACT_ID_" jdbcType="VARCHAR" property="endActId" />
+    <result column="SUPER_PROCESS_INSTANCE_ID_" jdbcType="VARCHAR" property="superProcessInstanceId" />
+    <result column="DELETE_REASON_" jdbcType="VARCHAR" property="deleteReason" />
+    <result column="TENANT_ID_" jdbcType="VARCHAR" property="tenantId" />
+  </resultMap>
+</mapper>

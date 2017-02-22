@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.credan.data.inport.dao.AcRepaymentplanRMapper">
+  <resultMap id="BaseResultMap" type="com.credan.data.inport.entity.AcRepaymentplanR">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="idrepaymentPlan" jdbcType="VARCHAR" property="idrepaymentplan" />
+    <id column="idorder" jdbcType="VARCHAR" property="idorder" />
+    <result column="term" jdbcType="INTEGER" property="term" />
+    <result column="rpyDate" jdbcType="TIMESTAMP" property="rpydate" />
+    <result column="mAmount" jdbcType="DECIMAL" property="mamount" />
+    <result column="capital" jdbcType="DECIMAL" property="capital" />
+    <result column="fee" jdbcType="DECIMAL" property="fee" />
+    <result column="interest" jdbcType="DECIMAL" property="interest" />
+    <result column="ovdFine" jdbcType="DECIMAL" property="ovdfine" />
+    <result column="crnDate" jdbcType="TIMESTAMP" property="crndate" />
+    <result column="status" jdbcType="VARCHAR" property="status" />
+    <result column="discription" jdbcType="VARCHAR" property="discription" />
+    <result column="createTime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="updateTime" jdbcType="TIMESTAMP" property="updatetime" />
+    <result column="availableFlag" jdbcType="VARCHAR" property="availableflag" />
+    <result column="merg_idrepaymentPlan" jdbcType="VARCHAR" property="mergIdrepaymentplan" />
+  </resultMap>
+</mapper>

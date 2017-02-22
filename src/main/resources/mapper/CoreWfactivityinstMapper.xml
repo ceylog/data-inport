@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.credan.data.inport.dao.CoreWfactivityinstMapper">
+  <resultMap id="BaseResultMap" type="com.credan.data.inport.entity.CoreWfactivityinst">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="ACTINSTID" jdbcType="VARCHAR" property="actinstid" />
+    <result column="ACTNAME" jdbcType="VARCHAR" property="actname" />
+    <result column="CURRENTSTATE" jdbcType="VARCHAR" property="currentstate" />
+    <result column="CREATETIME" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="STARTTIME" jdbcType="TIMESTAMP" property="starttime" />
+    <result column="ENDTIME" jdbcType="TIMESTAMP" property="endtime" />
+    <result column="REMINDTIME" jdbcType="TIMESTAMP" property="remindtime" />
+    <result column="FINALTIME" jdbcType="TIMESTAMP" property="finaltime" />
+    <result column="ISTIMEOUT" jdbcType="VARCHAR" property="istimeout" />
+    <result column="CID" jdbcType="VARCHAR" property="cid" />
+    <result column="PROCESSINSTID" jdbcType="VARCHAR" property="processinstid" />
+    <result column="SUBPROCESSINSTID" jdbcType="VARCHAR" property="subprocessinstid" />
+    <result column="PRIORITY" jdbcType="DOUBLE" property="priority" />
+    <result column="P_CURRENTSTATE" jdbcType="VARCHAR" property="pCurrentstate" />
+    <result column="PROCESSDEFID" jdbcType="VARCHAR" property="processdefid" />
+    <result column="ACTIVITYDEFID" jdbcType="VARCHAR" property="activitydefid" />
+    <result column="TASKNUM_START" jdbcType="DOUBLE" property="tasknumStart" />
+    <result column="TIMEOUT" jdbcType="DECIMAL" property="timeout" />
+    <result column="ACTDESC" jdbcType="LONGVARCHAR" property="actdesc" />
+    <result column="FIN_POINT" jdbcType="LONGVARCHAR" property="finPoint" />
+  </resultMap>
+</mapper>

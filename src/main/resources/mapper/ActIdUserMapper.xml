@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.credan.data.inport.dao.ActIdUserMapper">
+  <resultMap id="BaseResultMap" type="com.credan.data.inport.entity.ActIdUser">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="ID_" jdbcType="VARCHAR" property="id" />
+    <result column="REV_" jdbcType="INTEGER" property="rev" />
+    <result column="FIRST_" jdbcType="VARCHAR" property="first" />
+    <result column="LAST_" jdbcType="VARCHAR" property="last" />
+    <result column="EMAIL_" jdbcType="VARCHAR" property="email" />
+    <result column="PWD_" jdbcType="VARCHAR" property="pwd" />
+    <result column="PICTURE_ID_" jdbcType="VARCHAR" property="pictureId" />
+  </resultMap>
+</mapper>

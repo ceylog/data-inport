@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.credan.data.inport.dao.CiProjectAuditLogMapper">
+  <resultMap id="BaseResultMap" type="com.credan.data.inport.entity.CiProjectAuditLog">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <result column="id" jdbcType="CHAR" property="id" />
+    <result column="user_id" jdbcType="CHAR" property="userId" />
+    <result column="project_id" jdbcType="CHAR" property="projectId" />
+    <result column="before_audit_status" jdbcType="CHAR" property="beforeAuditStatus" />
+    <result column="after_audit_status" jdbcType="CHAR" property="afterAuditStatus" />
+    <result column="memo" jdbcType="VARCHAR" property="memo" />
+    <result column="ext" jdbcType="VARCHAR" property="ext" />
+    <result column="operator_name" jdbcType="VARCHAR" property="operatorName" />
+    <result column="operator_id" jdbcType="CHAR" property="operatorId" />
+    <result column="created_time" jdbcType="TIMESTAMP" property="createdTime" />
+  </resultMap>
+</mapper>

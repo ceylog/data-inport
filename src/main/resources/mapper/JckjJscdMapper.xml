@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.credan.data.inport.dao.JckjJscdMapper">
+  <resultMap id="BaseResultMap" type="com.credan.data.inport.entity.JckjJscd">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="JSID" jdbcType="VARCHAR" property="jsid" />
+    <id column="CDID" jdbcType="VARCHAR" property="cdid" />
+  </resultMap>
+</mapper>

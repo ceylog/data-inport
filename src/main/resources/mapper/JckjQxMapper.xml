@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.credan.data.inport.dao.JckjQxMapper">
+  <resultMap id="BaseResultMap" type="com.credan.data.inport.entity.JckjQx">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="MC" jdbcType="VARCHAR" property="mc" />
+    <result column="SM" jdbcType="VARCHAR" property="sm" />
+    <result column="SC" jdbcType="TINYINT" property="sc" />
+    <result column="XTID" jdbcType="VARCHAR" property="xtid" />
+    <result column="BH" jdbcType="VARCHAR" property="bh" />
+  </resultMap>
+</mapper>

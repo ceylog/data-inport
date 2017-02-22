@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.credan.data.inport.dao.CoreMessagesRightMapper">
+  <resultMap id="BaseResultMap" type="com.credan.data.inport.entity.CoreMessagesRight">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <result column="MSG_TYPEID" jdbcType="VARCHAR" property="msgTypeid" />
+    <result column="RID" jdbcType="VARCHAR" property="rid" />
+    <result column="RTYPE" jdbcType="VARCHAR" property="rtype" />
+    <result column="MSG_CLASSID" jdbcType="VARCHAR" property="msgClassid" />
+  </resultMap>
+</mapper>

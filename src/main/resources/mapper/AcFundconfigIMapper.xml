@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.credan.data.inport.dao.AcFundconfigIMapper">
+  <resultMap id="BaseResultMap" type="com.credan.data.inport.entity.AcFundconfigI">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="idfundConfig" jdbcType="VARCHAR" property="idfundconfig" />
+    <result column="fundRate" jdbcType="DECIMAL" property="fundrate" />
+    <result column="incomeRate" jdbcType="DECIMAL" property="incomerate" />
+    <result column="startTime" jdbcType="TIMESTAMP" property="starttime" />
+    <result column="endTime" jdbcType="TIMESTAMP" property="endtime" />
+    <result column="availableFlag" jdbcType="VARCHAR" property="availableflag" />
+    <result column="splidMode" jdbcType="VARCHAR" property="splidmode" />
+    <result column="capitalProportion" jdbcType="DECIMAL" property="capitalproportion" />
+    <result column="capitalOrder" jdbcType="VARCHAR" property="capitalorder" />
+    <result column="badDebtPayPropt" jdbcType="DECIMAL" property="baddebtpaypropt" />
+    <result column="createTime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="updateTime" jdbcType="TIMESTAMP" property="updatetime" />
+    <result column="idfund" jdbcType="VARCHAR" property="idfund" />
+    <result column="idmerchant" jdbcType="VARCHAR" property="idmerchant" />
+    <result column="monthlyAmount" jdbcType="DECIMAL" property="monthlyamount" />
+  </resultMap>
+</mapper>

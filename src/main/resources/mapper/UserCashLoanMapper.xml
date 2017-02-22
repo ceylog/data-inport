@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.credan.data.inport.dao.UserCashLoanMapper">
+  <resultMap id="BaseResultMap" type="com.credan.data.inport.entity.UserCashLoan">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="user_id" jdbcType="VARCHAR" property="userId" />
+    <result column="cash_status" jdbcType="BIT" property="cashStatus" />
+    <result column="loan_interest" jdbcType="DECIMAL" property="loanInterest" />
+    <result column="created_time" jdbcType="TIMESTAMP" property="createdTime" />
+    <result column="last_updated" jdbcType="TIMESTAMP" property="lastUpdated" />
+    <result column="cash_limit" jdbcType="DECIMAL" property="cashLimit" />
+    <result column="cash_available" jdbcType="DECIMAL" property="cashAvailable" />
+    <result column="memo" jdbcType="VARCHAR" property="memo" />
+    <result column="freeze_amount" jdbcType="DECIMAL" property="freezeAmount" />
+  </resultMap>
+</mapper>

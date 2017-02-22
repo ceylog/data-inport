@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.credan.data.inport.dao.CiApplyInfoMapper">
+  <resultMap id="BaseResultMap" type="com.credan.data.inport.entity.CiApplyInfo">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="user_id" jdbcType="VARCHAR" property="userId" />
+    <result column="apply_type" jdbcType="CHAR" property="applyType" />
+    <result column="apply_total_amout" jdbcType="DECIMAL" property="applyTotalAmout" />
+    <result column="apply_amout" jdbcType="DECIMAL" property="applyAmout" />
+    <result column="term" jdbcType="BIGINT" property="term" />
+    <result column="unit" jdbcType="CHAR" property="unit" />
+    <result column="apply_date" jdbcType="TIMESTAMP" property="applyDate" />
+    <result column="merchant_id" jdbcType="VARCHAR" property="merchantId" />
+    <result column="memo" jdbcType="VARCHAR" property="memo" />
+    <result column="created_time" jdbcType="TIMESTAMP" property="createdTime" />
+    <result column="last_updated" jdbcType="TIMESTAMP" property="lastUpdated" />
+  </resultMap>
+</mapper>

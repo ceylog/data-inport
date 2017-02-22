@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.credan.data.inport.dao.AcUsrrpyFMapper">
+  <resultMap id="BaseResultMap" type="com.credan.data.inport.entity.AcUsrrpyF">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="idusrRpy" jdbcType="VARCHAR" property="idusrrpy" />
+    <result column="idrepaymentPlan" jdbcType="VARCHAR" property="idrepaymentplan" />
+    <result column="payType" jdbcType="VARCHAR" property="paytype" />
+    <result column="principal" jdbcType="VARCHAR" property="principal" />
+    <result column="interest" jdbcType="VARCHAR" property="interest" />
+    <result column="fee" jdbcType="VARCHAR" property="fee" />
+    <result column="punishAmount" jdbcType="VARCHAR" property="punishamount" />
+    <result column="totalAmount" jdbcType="VARCHAR" property="totalamount" />
+    <result column="status" jdbcType="VARCHAR" property="status" />
+    <result column="createTime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="updateTime" jdbcType="TIMESTAMP" property="updatetime" />
+  </resultMap>
+</mapper>

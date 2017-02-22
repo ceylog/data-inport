@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.credan.data.inport.dao.FraudTransactionMapper">
+  <resultMap id="BaseResultMap" type="com.credan.data.inport.entity.FraudTransaction">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="phone" jdbcType="VARCHAR" property="phone" />
+    <result column="user_id" jdbcType="VARCHAR" property="userId" />
+    <result column="merchant_phone" jdbcType="VARCHAR" property="merchantPhone" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="card_num" jdbcType="VARCHAR" property="cardNum" />
+    <result column="id_card" jdbcType="VARCHAR" property="idCard" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+    <result column="edu_level" jdbcType="INTEGER" property="eduLevel" />
+    <result column="marital_status" jdbcType="INTEGER" property="maritalStatus" />
+    <result column="emergency_contact" jdbcType="VARCHAR" property="emergencyContact" />
+    <result column="emergency_phone" jdbcType="VARCHAR" property="emergencyPhone" />
+    <result column="ip" jdbcType="VARCHAR" property="ip" />
+    <result column="score" jdbcType="INTEGER" property="score" />
+    <result column="device_id" jdbcType="VARCHAR" property="deviceId" />
+    <result column="session_id" jdbcType="VARCHAR" property="sessionId" />
+    <result column="merchant_id" jdbcType="VARCHAR" property="merchantId" />
+    <result column="created_time" jdbcType="TIMESTAMP" property="createdTime" />
+    <result column="last_updated" jdbcType="TIMESTAMP" property="lastUpdated" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.credan.data.inport.dao.AcOrderTMapper">
+  <resultMap id="BaseResultMap" type="com.credan.data.inport.entity.AcOrderT">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="idorder" jdbcType="VARCHAR" property="idorder" />
+    <id column="idmerchant" jdbcType="VARCHAR" property="idmerchant" />
+    <result column="idusr" jdbcType="VARCHAR" property="idusr" />
+    <result column="orderAmount" jdbcType="DECIMAL" property="orderamount" />
+    <result column="transferStatus" jdbcType="VARCHAR" property="transferstatus" />
+    <result column="createTime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="prdCode" jdbcType="VARCHAR" property="prdcode" />
+    <result column="memo" jdbcType="VARCHAR" property="memo" />
+    <result column="updateTime" jdbcType="TIMESTAMP" property="updatetime" />
+    <result column="availableFlag" jdbcType="VARCHAR" property="availableflag" />
+    <result column="fee" jdbcType="DECIMAL" property="fee" />
+    <result column="interest" jdbcType="DECIMAL" property="interest" />
+    <result column="interestRate" jdbcType="DECIMAL" property="interestrate" />
+    <result column="term" jdbcType="INTEGER" property="term" />
+    <result column="type" jdbcType="VARCHAR" property="type" />
+  </resultMap>
+</mapper>

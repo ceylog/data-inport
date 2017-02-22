@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.credan.data.inport.dao.VAllMessagesMapper">
+  <resultMap id="BaseResultMap" type="com.credan.data.inport.entity.VAllMessages">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <result column="M_GUID" jdbcType="VARCHAR" property="mGuid" />
+    <result column="M_TITLE" jdbcType="VARCHAR" property="mTitle" />
+    <result column="M_CONTENT" jdbcType="VARCHAR" property="mContent" />
+    <result column="CREATEMAN" jdbcType="VARCHAR" property="createman" />
+    <result column="CREATEMAN_NM" jdbcType="VARCHAR" property="createmanNm" />
+    <result column="CREATETIME" jdbcType="VARCHAR" property="createtime" />
+    <result column="OPT_BUSI_TYPE" jdbcType="VARCHAR" property="optBusiType" />
+    <result column="OPT_BUSI_ENTITY" jdbcType="VARCHAR" property="optBusiEntity" />
+    <result column="BQ_ID" jdbcType="VARCHAR" property="bqId" />
+    <result column="BR_ID" jdbcType="VARCHAR" property="brId" />
+    <result column="BA_ID" jdbcType="VARCHAR" property="baId" />
+    <result column="KS_ID" jdbcType="VARCHAR" property="ksId" />
+    <result column="M_PRIORITY" jdbcType="VARCHAR" property="mPriority" />
+    <result column="EXTEND1" jdbcType="VARCHAR" property="extend1" />
+    <result column="EXTEND2" jdbcType="VARCHAR" property="extend2" />
+    <result column="EXTEND3" jdbcType="VARCHAR" property="extend3" />
+    <result column="EXTEND4" jdbcType="VARCHAR" property="extend4" />
+    <result column="EXTEND5" jdbcType="VARCHAR" property="extend5" />
+    <result column="EXTEND6" jdbcType="VARCHAR" property="extend6" />
+    <result column="MSG_BUSI_TYPE" jdbcType="VARCHAR" property="msgBusiType" />
+    <result column="MSG_PARENT_ID" jdbcType="VARCHAR" property="msgParentId" />
+  </resultMap>
+</mapper>

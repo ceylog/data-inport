@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.credan.data.inport.dao.JuxinliLogMapper">
+  <resultMap id="BaseResultMap" type="com.credan.data.inport.entity.JuxinliLog">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="ID" jdbcType="CHAR" property="id" />
+    <result column="USER_ID" jdbcType="CHAR" property="userId" />
+    <result column="REQUEST" jdbcType="VARCHAR" property="request" />
+    <result column="RESPONSE" jdbcType="VARCHAR" property="response" />
+    <result column="CREATE_TIME" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="UPDATE_TIME" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="DATA_SOURCE" jdbcType="INTEGER" property="dataSource" />
+    <result column="STATUS" jdbcType="INTEGER" property="status" />
+  </resultMap>
+</mapper>

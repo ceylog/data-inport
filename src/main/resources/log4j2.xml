@@ -21,8 +21,51 @@
         </RollingFile>
     </Appenders>
     <Loggers>
+        <!--<logger name="druid.sql" level="info">
+            <appender-ref ref="Console"/>
+        </logger>
+        <logger name="druid.sql.DataSource" level="info">
+            <appender-ref ref="Console"/>
+        </logger>
+        <logger name="druid.sql.Connection" level="info">
+            <appender-ref ref="Console"/>
+        </logger>
+        <logger name="druid.sql.Statement" level="debug" additivity="false">
+            <appender-ref ref="Console"/>
+        </logger>
+        <logger name="druid.sql.ResultSet" level="info" additivity="false">
+            <appender-ref ref="Console"/>
+        </logger>-->
         <!-- 输出info级别信息 -->
-        <Root level="info">
+        <!--<logger name="log4j.logger.java.sql" level="debug">
+            <appender-ref ref="Console"/>
+        </logger>
+        <logger name="log4j.logger.java.sql.Connection" level="debug">
+            <appender-ref ref="Console"/>
+        </logger>
+        <logger name="log4j.logger.java.sql.Statement" level="debug">
+            <appender-ref ref="Console"/>
+        </logger>
+        <logger name="log4j.logger.java.sql.PreparedStatement" level="debug">
+            <appender-ref ref="Console"/>
+        </logger>
+        <logger name="log4j.logger.java.sql.ResultSet" level="debug">
+            <appender-ref ref="Console"/>
+        </logger>-->
+        <!--<logger name="jdbc.sqlonly" level="WARN"><appender-ref ref="Console"/></logger>
+        <logger name="jdbc.sqltiming" level="INFO"><appender-ref ref="Console"/></logger>
+        <logger name="jdbc.resultsettable" level="INFO"><appender-ref ref="Console"/></logger>
+        <logger name="jdbc.resultset" level="WARN"><appender-ref ref="Console"/></logger>
+        <logger name="jdbc.connection" level="WARN"><appender-ref ref="Console"/></logger>
+        <logger name="jdbc.audit" level="WARN"><appender-ref ref="Console"/></logger>-->
+        <logger name="com.credan.data.inport" level="INFO" additivity="false">
+            <AppenderRef ref="Console" />
+        </logger>
+        <logger name="log4jdbc.log4j2" level="INFO" additivity="false">
+            <MarkerFilter marker="LOG4JDBC_OTHER" onMatch="DENY" onMismatch="NEUTRAL"/>
+            <appender-ref ref="Console"/>
+        </logger>
+        <Root level="WARN">
             <AppenderRef ref="Console" />
             <AppenderRef ref="RollingFile" />
         </Root>

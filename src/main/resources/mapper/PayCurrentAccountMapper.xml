@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.credan.data.inport.dao.PayCurrentAccountMapper">
+  <resultMap id="BaseResultMap" type="com.credan.data.inport.entity.PayCurrentAccount">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="project_id" jdbcType="VARCHAR" property="projectId" />
+    <result column="plan_id" jdbcType="VARCHAR" property="planId" />
+    <result column="out_trade_no" jdbcType="VARCHAR" property="outTradeNo" />
+    <result column="state" jdbcType="INTEGER" property="state" />
+    <result column="last_updated" jdbcType="TIMESTAMP" property="lastUpdated" />
+    <result column="user_id" jdbcType="VARCHAR" property="userId" />
+    <result column="open_id" jdbcType="VARCHAR" property="openId" />
+    <result column="transaction_id" jdbcType="VARCHAR" property="transactionId" />
+    <result column="date_created" jdbcType="TIMESTAMP" property="dateCreated" />
+  </resultMap>
+</mapper>

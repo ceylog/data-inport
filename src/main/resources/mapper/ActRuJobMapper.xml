@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.credan.data.inport.dao.ActRuJobMapper">
+  <resultMap id="BaseResultMap" type="com.credan.data.inport.entity.ActRuJob">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="ID_" jdbcType="VARCHAR" property="id" />
+    <result column="REV_" jdbcType="INTEGER" property="rev" />
+    <result column="TYPE_" jdbcType="VARCHAR" property="type" />
+    <result column="LOCK_EXP_TIME_" jdbcType="TIMESTAMP" property="lockExpTime" />
+    <result column="LOCK_OWNER_" jdbcType="VARCHAR" property="lockOwner" />
+    <result column="EXCLUSIVE_" jdbcType="BIT" property="exclusive" />
+    <result column="EXECUTION_ID_" jdbcType="VARCHAR" property="executionId" />
+    <result column="PROCESS_INSTANCE_ID_" jdbcType="VARCHAR" property="processInstanceId" />
+    <result column="PROC_DEF_ID_" jdbcType="VARCHAR" property="procDefId" />
+    <result column="RETRIES_" jdbcType="INTEGER" property="retries" />
+    <result column="EXCEPTION_STACK_ID_" jdbcType="VARCHAR" property="exceptionStackId" />
+    <result column="EXCEPTION_MSG_" jdbcType="VARCHAR" property="exceptionMsg" />
+    <result column="DUEDATE_" jdbcType="TIMESTAMP" property="duedate" />
+    <result column="REPEAT_" jdbcType="VARCHAR" property="repeat" />
+    <result column="HANDLER_TYPE_" jdbcType="VARCHAR" property="handlerType" />
+    <result column="HANDLER_CFG_" jdbcType="VARCHAR" property="handlerCfg" />
+    <result column="TENANT_ID_" jdbcType="VARCHAR" property="tenantId" />
+  </resultMap>
+</mapper>

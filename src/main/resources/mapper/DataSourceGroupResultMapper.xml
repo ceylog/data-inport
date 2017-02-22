@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.credan.data.inport.dao.DataSourceGroupResultMapper">
+  <resultMap id="BaseResultMap" type="com.credan.data.inport.entity.DataSourceGroupResult">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="user_id" jdbcType="VARCHAR" property="userId" />
+    <result column="group_type" jdbcType="VARCHAR" property="groupType" />
+    <result column="call_status" jdbcType="VARCHAR" property="callStatus" />
+    <result column="call_back_status" jdbcType="VARCHAR" property="callBackStatus" />
+    <result column="total_index" jdbcType="INTEGER" property="totalIndex" />
+    <result column="end_index" jdbcType="INTEGER" property="endIndex" />
+    <result column="end_datasource_id" jdbcType="BIGINT" property="endDatasourceId" />
+    <result column="memo" jdbcType="VARCHAR" property="memo" />
+    <result column="created_time" jdbcType="TIMESTAMP" property="createdTime" />
+    <result column="last_updated" jdbcType="TIMESTAMP" property="lastUpdated" />
+  </resultMap>
+</mapper>

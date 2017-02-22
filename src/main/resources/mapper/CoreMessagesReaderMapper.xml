@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.credan.data.inport.dao.CoreMessagesReaderMapper">
+  <resultMap id="BaseResultMap" type="com.credan.data.inport.entity.CoreMessagesReader">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="M_GUID" jdbcType="VARCHAR" property="mGuid" />
+    <id column="M_RECEIVER" jdbcType="VARCHAR" property="mReceiver" />
+    <result column="CLIENT_IP" jdbcType="VARCHAR" property="clientIp" />
+    <result column="CREATETIME" jdbcType="TIMESTAMP" property="createtime" />
+  </resultMap>
+</mapper>

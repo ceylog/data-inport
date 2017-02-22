@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.credan.data.inport.dao.CoreAuditLogMapper">
+  <resultMap id="BaseResultMap" type="com.credan.data.inport.entity.CoreAuditLog">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="LX" jdbcType="VARCHAR" property="lx" />
+    <result column="JB" jdbcType="VARCHAR" property="jb" />
+    <result column="FSSJ" jdbcType="TIMESTAMP" property="fssj" />
+    <result column="JLSJ" jdbcType="TIMESTAMP" property="jlsj" />
+    <result column="YHID" jdbcType="VARCHAR" property="yhid" />
+    <result column="YHXM" jdbcType="VARCHAR" property="yhxm" />
+    <result column="DN" jdbcType="VARCHAR" property="dn" />
+    <result column="IP" jdbcType="VARCHAR" property="ip" />
+    <result column="MAC" jdbcType="VARCHAR" property="mac" />
+    <result column="MC" jdbcType="VARCHAR" property="mc" />
+    <result column="XX" jdbcType="LONGVARCHAR" property="xx" />
+    <result column="CW" jdbcType="LONGVARCHAR" property="cw" />
+    <result column="YWCX" jdbcType="LONGVARCHAR" property="ywcx" />
+  </resultMap>
+</mapper>

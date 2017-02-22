@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.credan.data.inport.dao.AcFactFMapper">
+  <resultMap id="BaseResultMap" type="com.credan.data.inport.entity.AcFactF">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="idfact" jdbcType="VARCHAR" property="idfact" />
+    <result column="splitType" jdbcType="VARCHAR" property="splittype" />
+    <result column="splitRate" jdbcType="DECIMAL" property="splitrate" />
+    <result column="baseAmount" jdbcType="DECIMAL" property="baseamount" />
+    <result column="billAmount" jdbcType="DECIMAL" property="billamount" />
+    <result column="splitAmount" jdbcType="DECIMAL" property="splitamount" />
+    <result column="paymentStatus" jdbcType="VARCHAR" property="paymentstatus" />
+    <result column="createTime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="idorder" jdbcType="VARCHAR" property="idorder" />
+    <result column="idfundAccount" jdbcType="VARCHAR" property="idfundaccount" />
+    <result column="idfund" jdbcType="VARCHAR" property="idfund" />
+    <result column="idfundConfig" jdbcType="VARCHAR" property="idfundconfig" />
+    <result column="idrepaymentPlan" jdbcType="VARCHAR" property="idrepaymentplan" />
+    <result column="idusrRpy" jdbcType="VARCHAR" property="idusrrpy" />
+  </resultMap>
+</mapper>
