@@ -6,13 +6,13 @@ spring:
 
   datasource:
     username: credan_user
-    password: Credan888
-    url: jdbc:log4jdbc:mysql://192.168.16.200:3306/credan?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull
+    password: 1zhida**
+    url: jdbc:log4jdbc:mysql://uapi.credan.com:3307/credan?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
 
 watch:
-  path: c:/Users/Administrator/Downloads
+  path: /Users/gang/Downloads
 
 server:
   port: 8080
