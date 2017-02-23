@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.credan.data.inport.dao.OauthtokenMapper">
+  <resultMap id="BaseResultMap" type="com.credan.data.inport.entity.Oauthtoken">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="serid" jdbcType="VARCHAR" property="serid" />
+    <result column="tokenid" jdbcType="VARCHAR" property="tokenid" />
+    <result column="refreshid" jdbcType="VARCHAR" property="refreshid" />
+    <result column="clientid" jdbcType="VARCHAR" property="clientid" />
+    <result column="granttype" jdbcType="VARCHAR" property="granttype" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="redirecturi" jdbcType="VARCHAR" property="redirecturi" />
+    <result column="refreshed" jdbcType="BIT" property="refreshed" />
+    <result column="locked" jdbcType="BIT" property="locked" />
+    <result column="createddate" jdbcType="TIMESTAMP" property="createddate" />
+    <result column="createdby" jdbcType="VARCHAR" property="createdby" />
+    <result column="lastmodifieddate" jdbcType="TIMESTAMP" property="lastmodifieddate" />
+    <result column="lastmodifiedby" jdbcType="VARCHAR" property="lastmodifiedby" />
+    <result column="resourceids" jdbcType="LONGVARCHAR" property="resourceids" />
+    <result column="scopes" jdbcType="LONGVARCHAR" property="scopes" />
+    <result column="accesstoken" jdbcType="LONGVARBINARY" property="accesstoken" />
+    <result column="refreshtoken" jdbcType="LONGVARBINARY" property="refreshtoken" />
+    <result column="authentication" jdbcType="LONGVARBINARY" property="authentication" />
+  </resultMap>
+</mapper>

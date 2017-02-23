@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.credan.data.inport.dao.AccountMapper">
+  <resultMap id="BaseResultMap" type="com.credan.data.inport.entity.Account">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="accountid" jdbcType="VARCHAR" property="accountid" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="enabled" jdbcType="CHAR" property="enabled" />
+    <result column="expired" jdbcType="CHAR" property="expired" />
+    <result column="locked" jdbcType="CHAR" property="locked" />
+    <result column="credentialsexpired" jdbcType="CHAR" property="credentialsexpired" />
+    <result column="createddate" jdbcType="TIMESTAMP" property="createddate" />
+    <result column="createdby" jdbcType="VARCHAR" property="createdby" />
+    <result column="lastmodifieddate" jdbcType="TIMESTAMP" property="lastmodifieddate" />
+    <result column="lastmodifiedby" jdbcType="VARCHAR" property="lastmodifiedby" />
+  </resultMap>
+</mapper>

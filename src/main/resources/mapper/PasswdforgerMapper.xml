@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.credan.data.inport.dao.PasswdforgerMapper">
+  <resultMap id="BaseResultMap" type="com.credan.data.inport.entity.Passwdforger">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="forgetid" jdbcType="VARCHAR" property="forgetid" />
+    <result column="fromip" jdbcType="VARCHAR" property="fromip" />
+    <result column="accountid" jdbcType="VARCHAR" property="accountid" />
+    <result column="otp" jdbcType="VARCHAR" property="otp" />
+    <result column="used" jdbcType="BIT" property="used" />
+    <result column="expired" jdbcType="BIT" property="expired" />
+    <result column="expirdate" jdbcType="TIMESTAMP" property="expirdate" />
+    <result column="createddate" jdbcType="TIMESTAMP" property="createddate" />
+    <result column="lastmodifieddate" jdbcType="TIMESTAMP" property="lastmodifieddate" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.credan.data.inport.dao.AccountRoleMapper">
+  <resultMap id="BaseResultMap" type="com.credan.data.inport.entity.AccountRole">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="serid" jdbcType="VARCHAR" property="serid" />
+    <result column="accountid" jdbcType="VARCHAR" property="accountid" />
+    <result column="roleid" jdbcType="VARCHAR" property="roleid" />
+    <result column="createddate" jdbcType="TIMESTAMP" property="createddate" />
+    <result column="createdby" jdbcType="VARCHAR" property="createdby" />
+    <result column="lastmodifieddate" jdbcType="TIMESTAMP" property="lastmodifieddate" />
+    <result column="lastmodifiedby" jdbcType="VARCHAR" property="lastmodifiedby" />
+  </resultMap>
+</mapper>
