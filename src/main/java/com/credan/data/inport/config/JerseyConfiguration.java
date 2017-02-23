@@ -10,7 +10,6 @@ import org.springframework.stereotype.Component;
 import javax.annotation.PostConstruct;
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.Path;
-import java.util.Map;
 
 /**
  * @Author Sam Wang
@@ -23,9 +22,6 @@ public class JerseyConfiguration extends ResourceConfig {
 
     protected final Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    /*public JerseyConfiguration(){
-        packages("com.credan.data.inport.web");
-    }*/
 
     @Autowired
     private ApplicationContext appCtx;
@@ -33,11 +29,10 @@ public class JerseyConfiguration extends ResourceConfig {
     @PostConstruct
     public void setup() {
         logger.info("Rest classes found:");
-        Map<String, Object> beans = appCtx.getBeansWithAnnotation(Path.class);
-        for (Object o : beans.values()) {
-            logger.info(" -> " + o.getClass().getName());
-            register(o);
-        }
+        appCtx.getBeansWithAnnotation(Path.class).forEach((name, resource) -> {
+            logger.info(" -> {}", resource.getClass().getName());
+            register(resource);
+        });
     }
 
 }

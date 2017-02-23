@@ -16,6 +16,7 @@ import org.springframework.context.annotation.Primary;
 
 import javax.inject.Inject;
 import javax.sql.DataSource;
+import javax.ws.rs.ApplicationPath;
 
 /**
  * @Author Sam Wang
@@ -24,6 +25,7 @@ import javax.sql.DataSource;
  */
 @Configuration
 @MapperScan("com.credan.data.inport.dao")
+@ApplicationPath("/api/v1")
 public class AppConfiguration {
 
     protected final Logger logger = LoggerFactory.getLogger(this.getClass());

@@ -22,7 +22,7 @@ public class User {
     private String email;
 
     /**
-     * Unknown 0, 高中及以下 1，大专 2，本科 3，研究生及以上 4，其它 5；学生分期：10，大专；11，本科；12，研究生
+     * Unknown 0, 高中及以下 1，大专 2，本科 3，研究生及以上 4，其它 5
      */
     @Column(name = "edu_level")
     private Integer eduLevel;
@@ -132,9 +132,6 @@ public class User {
     @Column(name = "work_time")
     private String workTime;
 
-    /**
-     * 专业
-     */
     private String major;
 
     /**
@@ -212,18 +209,18 @@ public class User {
     }
 
     /**
-     * 获取Unknown 0, 高中及以下 1，大专 2，本科 3，研究生及以上 4，其它 5；学生分期：10，大专；11，本科；12，研究生
+     * 获取Unknown 0, 高中及以下 1，大专 2，本科 3，研究生及以上 4，其它 5
      *
-     * @return edu_level - Unknown 0, 高中及以下 1，大专 2，本科 3，研究生及以上 4，其它 5；学生分期：10，大专；11，本科；12，研究生
+     * @return edu_level - Unknown 0, 高中及以下 1，大专 2，本科 3，研究生及以上 4，其它 5
      */
     public Integer getEduLevel() {
         return eduLevel;
     }
 
     /**
-     * 设置Unknown 0, 高中及以下 1，大专 2，本科 3，研究生及以上 4，其它 5；学生分期：10，大专；11，本科；12，研究生
+     * 设置Unknown 0, 高中及以下 1，大专 2，本科 3，研究生及以上 4，其它 5
      *
-     * @param eduLevel Unknown 0, 高中及以下 1，大专 2，本科 3，研究生及以上 4，其它 5；学生分期：10，大专；11，本科；12，研究生
+     * @param eduLevel Unknown 0, 高中及以下 1，大专 2，本科 3，研究生及以上 4，其它 5
      */
     public void setEduLevel(Integer eduLevel) {
         this.eduLevel = eduLevel;
@@ -684,18 +681,14 @@ public class User {
     }
 
     /**
-     * 获取专业
-     *
-     * @return major - 专业
+     * @return major
      */
     public String getMajor() {
         return major;
     }
 
     /**
-     * 设置专业
-     *
-     * @param major 专业
+     * @param major
      */
     public void setMajor(String major) {
         this.major = major;
