@@ -1,16 +1,26 @@
 package com.credan.data.inport;
 
+import com.credan.data.inport.dao.DataChsiMapper;
+import com.credan.data.inport.entity.DataChsi;
+import com.credan.data.inport.service.watch.WatchDir;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import org.apache.commons.io.FileUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.autoconfigure.jersey.ResourceConfigCustomizer;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Component;
 
+import java.io.File;
 import java.io.IOException;
-import java.nio.file.*;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 /**
  * @Author Sam Wang
@@ -21,59 +31,95 @@ import java.nio.file.*;
 public class ApplicationStartup implements ApplicationListener<ContextRefreshedEvent> {
 
     @Value("${watch.path}")
-    private String path;
+    private String dirPath;
 
-    private WatchService watchService;
+    private ObjectMapper mapper;
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
+
+    @Autowired
+    private DataChsiMapper chsiMapper;
+
 
     @Override
     public void onApplicationEvent(ContextRefreshedEvent event) {
         logger.info("Application Startup");
         //防止事件触发两次
         if(null == event.getApplicationContext().getParent()) {
-            Path dir = Paths.get(path);
-            try {
-                watchService = FileSystems.getDefault().newWatchService();
-                logger.info("watchService 初始化完成");
-                dir.register(watchService, StandardWatchEventKinds.ENTRY_CREATE, StandardWatchEventKinds.ENTRY_DELETE);
-                logger.info("注册事件完成");
 
-            } catch (IOException e) {
-                logger.error("error", e);
+            WatchDir watchDir = null;
+            try {
+                watchDir = WatchDir.watchDirectory(dirPath, false);
+            } catch (Exception e) {
+                e.printStackTrace();
             }
-            new Thread(new Runnable() {
-                @Override
-                public void run() {
-                    while (!Thread.interrupted()) {
-                        if (!watch()) {
-                            break;
+            if (null != watchDir) {
+                BlockingQueue<String> fileQueue = watchDir.processedFileQueue;
+                int nThreads = Runtime.getRuntime().availableProcessors();
+                ExecutorService executorService = Executors.newFixedThreadPool(nThreads);
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        while (true) {
+                            String file = null;
+                            try {
+                                file = fileQueue.take();
+                            } catch (InterruptedException e) {
+                                e.printStackTrace();
+                            }
+                            logger.info("queue take file: {}", file);
+                            executorService.submit(new ParseJSON(file));
                         }
                     }
-                }
-            }).start();
+                }).start();
+
+                logger.info("dir is watchd,wait put json text");
+                mapper = new ObjectMapper();
+            }
         }
     }
 
-    private boolean watch() {
-        WatchKey signal;
-        try {
-            // 等待监控信号
-            signal = watchService.take();
-        } catch (InterruptedException e) {
-            return false;
+    class ParseJSON implements Callable<String>{
+        private String path;
+        public ParseJSON(String path){
+            this.path = path;
         }
 
-        // 处理监控事件
-        for (WatchEvent<?> event : signal.pollEvents()) {
-            WatchEvent.Kind<?> kind = event.kind();
-            // 处理 OVERFLOW 事件
-            if (StandardWatchEventKinds.OVERFLOW.equals(kind)) {
-                continue;
+        @Override
+        public String call()  {
+            logger.info("handler json file {}",path);
+            //String s = readFile(new File(path));
+            //JavaType javaType = mapper.getTypeFactory().constructParametricType(ArrayList.class,Role.class);
+
+            File jsonFile = new File(path);
+
+            if(jsonFile.getName().endsWith("_学信网数据.txt")){
+                DataChsi dataChsi = null;
+                try {
+                    dataChsi = mapper.readValue(jsonFile, DataChsi.class);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                logger.info("fileName :{} ,parse json :{}",jsonFile.getName(),dataChsi);
+                chsiMapper.insertSelective(dataChsi);
+            }else if(jsonFile.getName().endsWith("_运营商数据.txt")){
+
+            }else if(jsonFile.getName().endsWith("")){
+
+            }else {
+                return null;
             }
-            logger.info("事件：{} , 文件名：{}", event.kind(), event.context());
+
+            try {
+                FileUtils.moveFile(jsonFile,new File(getDonePath()+File.separator+jsonFile.getName()));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            return jsonFile.getName();
         }
-        // 重置并继续监控
-        return signal.reset();
+    }
+
+    private String getDonePath(){
+        return dirPath + File.separator+"dnoe"+File.separator+ LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
     }
 }

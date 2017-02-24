@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.credan.data.inport.dao.DataChsiMapper">
+  <resultMap id="BaseResultMap" type="com.credan.data.inport.entity.DataChsi">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="real_name" jdbcType="VARCHAR" property="realName" />
+    <result column="sex" jdbcType="VARCHAR" property="sex" />
+    <result column="date_birth" jdbcType="DATE" property="dateBirth"/>
+    <result column="nation" jdbcType="VARCHAR" property="nation" />
+    <result column="id_card" jdbcType="VARCHAR" property="idCard" />
+    <result column="academy_name" jdbcType="VARCHAR" property="academyName" />
+    <result column="academic_level" jdbcType="VARCHAR" property="academicLevel" />
+    <result column="major_name" jdbcType="VARCHAR" property="majorName" />
+    <result column="length_school" jdbcType="VARCHAR" property="lengthSchool" />
+    <result column="education_background" jdbcType="VARCHAR" property="educationBackground" />
+    <result column="learning_form" jdbcType="VARCHAR" property="learningForm" />
+    <result column="series" jdbcType="VARCHAR" property="series" />
+    <result column="class" jdbcType="VARCHAR" property="class1" />
+    <result column="student_number" jdbcType="VARCHAR" property="studentNumber" />
+    <result column="date_enrollment" jdbcType="DATE" property="dateEnrollment" />
+    <result column="date_graduation" jdbcType="DATE" property="dateGraduation" />
+    <result column="school_status" jdbcType="VARCHAR" property="schoolStatus" />
+    <result column="exam_number" jdbcType="VARCHAR" property="examNumber" />
+    <result column="branch_courts" jdbcType="VARCHAR" property="branchCourts" />
+
+    <result column="accept_letter_pic" jdbcType="VARCHAR" property="acceptLetterPic"/>
+    <result column="study_fee_pic" jdbcType="VARCHAR" property="studyFeePic"/>
+    <result column="education_type" jdbcType="VARCHAR" property="educationType"/>
+  </resultMap>
+</mapper>
