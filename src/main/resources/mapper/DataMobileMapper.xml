@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.credan.data.inport.dao.DataMobileMapper">
+  <resultMap id="BaseResultMap" type="com.credan.data.inport.entity.DataMobile">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="rpt_id" jdbcType="VARCHAR" property="rptId" />
+    <result column="token" jdbcType="VARCHAR" property="token" />
+    <result column="version" jdbcType="VARCHAR" property="version" />
+    <result column="update_time" jdbcType="VARCHAR" property="updateTime" />
+    <result column="contacts_class1_blacklist_cnt" jdbcType="INTEGER" property="contactsClass1BlacklistCnt" />
+    <result column="contacts_router_ratio" jdbcType="VARCHAR" property="contactsRouterRatio" />
+    <result column="contacts_class2_blacklist_cnt" jdbcType="INTEGER" property="contactsClass2BlacklistCnt" />
+    <result column="contacts_router_cnt" jdbcType="INTEGER" property="contactsRouterCnt" />
+    <result column="contacts_class1_cnt" jdbcType="INTEGER" property="contactsClass1Cnt" />
+    <result column="phone_gray_score" jdbcType="INTEGER" property="phoneGrayScore" />
+    <result column="register_org_cnt" jdbcType="INTEGER" property="registerOrgCnt" />
+    <result column="searched_org_cnt" jdbcType="INTEGER" property="searchedOrgCnt" />
+    <result column="arised_open_web" jdbcType="VARCHAR" property="arisedOpenWeb" />
+    <result column="phone_with_other_idcards" jdbcType="VARCHAR" property="phoneWithOtherIdcards" />
+    <result column="idcard_with_other_phones" jdbcType="VARCHAR" property="idcardWithOtherPhones" />
+    <result column="idcard_with_other_names" jdbcType="VARCHAR" property="idcardWithOtherNames" />
+    <result column="searched_org_type" jdbcType="VARCHAR" property="searchedOrgType" />
+    <result column="register_org_type" jdbcType="VARCHAR" property="registerOrgType" />
+    <result column="phone_with_other_names" jdbcType="VARCHAR" property="phoneWithOtherNames" />
+    <result column="id_card" jdbcType="VARCHAR" property="idCard" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="main_service" jdbcType="LONGVARCHAR" property="mainService" />
+    <result column="behavior_check" jdbcType="LONGVARCHAR" property="behaviorCheck" />
+    <result column="collection_contact" jdbcType="LONGVARCHAR" property="collectionContact" />
+    <result column="contact_list" jdbcType="LONGVARCHAR" property="contactList" />
+    <result column="ebusiness_expense" jdbcType="LONGVARCHAR" property="ebusinessExpense" />
+    <result column="contact_region" jdbcType="LONGVARCHAR" property="contactRegion" />
+    <result column="application_check" jdbcType="LONGVARCHAR" property="applicationCheck" />
+    <result column="deliver_address" jdbcType="LONGVARCHAR" property="deliverAddress" />
+    <result column="trip_info" jdbcType="LONGVARCHAR" property="tripInfo" />
+    <result column="cell_behavior" jdbcType="LONGVARCHAR" property="cellBehavior" />
+  </resultMap>
+</mapper>

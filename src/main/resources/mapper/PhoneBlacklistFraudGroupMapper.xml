@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.credan.data.inport.dao.PhoneBlacklistFraudGroupMapper">
+  <resultMap id="BaseResultMap" type="com.credan.data.inport.entity.PhoneBlacklistFraudGroup">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="phone" jdbcType="VARCHAR" property="phone" />
+    <result column="call_count" jdbcType="INTEGER" property="callCount" />
+    <result column="source" jdbcType="VARCHAR" property="source" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="created_time" jdbcType="TIMESTAMP" property="createdTime" />
+  </resultMap>
+</mapper>

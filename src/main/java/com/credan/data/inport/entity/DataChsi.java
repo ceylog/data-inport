@@ -1,7 +1,6 @@
 package com.credan.data.inport.entity;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.alibaba.fastjson.annotation.JSONField;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -13,86 +12,83 @@ public class DataChsi {
     private Integer id;
 
     @Column(name = "real_name")
-    @JsonProperty("real_name")
+    @JSONField(name = "real_name")
     private String realName;
 
     private String sex;
 
     @Column(name ="date_birth")
-    @JsonProperty("date_birth")
-    @JsonFormat(pattern = "yyyy-MM-dd")
+    @JSONField(name = "date_birth",format = "yyyy-MM-dd")
     private Date dateBirth;
 
     private String nation;
 
     @Column(name = "id_card")
-    @JsonProperty("id_card")
+    @JSONField(name = "id_card")
     private String idCard;
 
     @Column(name = "academy_name")
-    @JsonProperty("academy_name")
+    @JSONField(name = "academy_name")
     private String academyName;
 
     @Column(name = "academic_level")
-    @JsonProperty("academic_level")
+    @JSONField(name = "academic_level")
     private String academicLevel;
 
     @Column(name = "major_name")
-    @JsonProperty("major_name")
+    @JSONField(name = "major_name")
     private String majorName;
 
     @Column(name = "length_school")
-    @JsonProperty("length_school")
+    @JSONField(name = "length_school")
     private String lengthSchool;
 
     @Column(name = "education_background")
-    @JsonProperty("education_background")
+    @JSONField(name = "education_background")
     private String educationBackground;
 
     @Column(name = "learning_form")
-    @JsonProperty("learning_form")
+    @JSONField(name = "learning_form")
     private String learningForm;
 
     private String series;
 
     @Column(name = "class")
-    @JsonProperty("class")
+    @JSONField(name = "class")
     private String class1;
 
     @Column(name = "student_number")
-    @JsonProperty("student_number")
+    @JSONField(name = "student_number")
     private String studentNumber;
 
     @Column(name = "date_enrollment")
-    @JsonProperty("date_enrollment")
-    @JsonFormat(pattern = "yyyy-MM-dd")
+    @JSONField(name = "date_enrollment",format = "yyyy-MM-dd")
     private Date dateEnrollment;
 
     @Column(name = "date_graduation")
-    @JsonProperty("date_graduation")
-    @JsonFormat(pattern = "yyyy-MM-dd")
+    @JSONField(name = "date_graduation",format = "yyyy-MM-dd")
     private Date dateGraduation;
 
     @Column(name = "school_status")
-    @JsonProperty("school_status")
+    @JSONField(name = "school_status")
     private String schoolStatus;
 
     @Column(name = "exam_number")
-    @JsonProperty("exam_number")
+    @JSONField(name = "exam_number")
     private String examNumber;
 
     @Column(name = "branch_courts")
-    @JsonProperty("branch_courts")
+    @JSONField(name = "branch_courts")
     private String branchCourts;
 
     @Column(name = "accept_letter_pic")
-    @JsonProperty("accept_letter_pic")
+    @JSONField(name = "accept_letter_pic")
     private String acceptLetterPic;
     @Column(name = "study_fee_pic")
-    @JsonProperty("study_fee_pic")
+    @JSONField(name = "study_fee_pic")
     private String studyFeePic;
     @Column(name = "education_type")
-    @JsonProperty("education_type")
+    @JSONField(name = "education_type")
     private String educationType;
 
 

@@ -25,7 +25,7 @@
 
         <javaClientGenerator targetPackage="${targetMapperPackage}" targetProject="${targetJavaProject}" type="XMLMAPPER" />
 
-        <table tableName="%" >
+        <table tableName="phone_blacklist_fraud_group" >
             <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
         </table>
     </context>
