@@ -193,10 +193,10 @@ public class ApplicationStartup implements ApplicationListener<ContextRefreshedE
             logger.warn("jsonFile {} is empty",jsonFile.getName());
             try {
                 FileUtils.moveFile(jsonFile,new File(getDonePath(type)+File.separator+"emptyFile"+File.separator+jsonFile.getName()));
+                return true;
             } catch (IOException e) {
-                e.printStackTrace();
+                throw new RuntimeException(e);
             }
-            return true;
         }
         return false;
     }
