@@ -1,63 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <Configuration status="WARN">
+    <Properties>
+        <Property name="PID">????</Property>
+        <Property name="LOG_EXCEPTION_CONVERSION_WORD">%xwEx</Property>
+        <Property name="LOG_LEVEL_PATTERN">%5p</Property>
+        <Property name="CONSOLE_LOG_PATTERN">%clr{%d{yyyy-MM-dd HH:mm:ss.SSS}}{faint} %clr{${LOG_LEVEL_PATTERN}} %clr{${sys:PID}}{magenta} %clr{---}{faint} %clr{[%15.15t]}{faint} %clr{%-40.40c{1.}}{cyan} %clr{:}{faint} %m%n${sys:LOG_EXCEPTION_CONVERSION_WORD}</Property>
+        <Property name="FILE_LOG_PATTERN">%d{yyyy-MM-dd HH:mm:ss.SSS} ${LOG_LEVEL_PATTERN} ${sys:PID} --- [%t] %-40.40c{1.} : %m%n${sys:LOG_EXCEPTION_CONVERSION_WORD}</Property>
+        <Property name="LOG_FILE">data-inport.log</Property>
+    </Properties>
     <Appenders>
         <Console name="Console" target="SYSTEM_OUT" follow="true">
-            <PatternLayout>
-                <pattern>%d %p %C{1.} [%t] %m%n</pattern>
-            </PatternLayout>
+            <PatternLayout pattern="${sys:CONSOLE_LOG_PATTERN}" />
         </Console>
-        <!-- 按日期每天生成log文件 -->
-        <RollingFile name="RollingFile" fileName="data-inport.log"
-                     filePattern="temp/data-inport-%d{yyyy-MM-dd}.log">
-            <PatternLayout pattern="%d %p %C{1.} [%t] %m%n"/>
+        <RollingFile name="File" fileName="${sys:LOG_FILE}" filePattern="logs/$${date:yyyy-MM}/data-inport-%d{yyyy-MM-dd-HH}-%i.log.gz">
+            <PatternLayout>
+                <Pattern>${sys:FILE_LOG_PATTERN}</Pattern>
+            </PatternLayout>
             <Policies>
-                <TimeBasedTriggeringPolicy interval="1"/>
+                <SizeBasedTriggeringPolicy size="10 MB" />
             </Policies>
-
-            <!-- log文件只打印error级别信息 -->
-            <Filters>
-                <ThresholdFilter level="error" onMatch="ACCEPT" onMismatch="DENY"/>
-            </Filters>
         </RollingFile>
     </Appenders>
     <Loggers>
-        <!--<logger name="druid.sql" level="info">
-            <appender-ref ref="Console"/>
-        </logger>
-        <logger name="druid.sql.DataSource" level="info">
-            <appender-ref ref="Console"/>
-        </logger>
-        <logger name="druid.sql.Connection" level="info">
-            <appender-ref ref="Console"/>
-        </logger>
-        <logger name="druid.sql.Statement" level="debug" additivity="false">
-            <appender-ref ref="Console"/>
-        </logger>
-        <logger name="druid.sql.ResultSet" level="info" additivity="false">
-            <appender-ref ref="Console"/>
-        </logger>-->
-        <!-- 输出info级别信息 -->
-        <!--<logger name="log4j.logger.java.sql" level="debug">
-            <appender-ref ref="Console"/>
-        </logger>
-        <logger name="log4j.logger.java.sql.Connection" level="debug">
-            <appender-ref ref="Console"/>
-        </logger>
-        <logger name="log4j.logger.java.sql.Statement" level="debug">
-            <appender-ref ref="Console"/>
-        </logger>
-        <logger name="log4j.logger.java.sql.PreparedStatement" level="debug">
-            <appender-ref ref="Console"/>
-        </logger>
-        <logger name="log4j.logger.java.sql.ResultSet" level="debug">
-            <appender-ref ref="Console"/>
-        </logger>-->
-        <!--<logger name="jdbc.sqlonly" level="WARN"><appender-ref ref="Console"/></logger>
-        <logger name="jdbc.sqltiming" level="INFO"><appender-ref ref="Console"/></logger>
-        <logger name="jdbc.resultsettable" level="INFO"><appender-ref ref="Console"/></logger>
-        <logger name="jdbc.resultset" level="WARN"><appender-ref ref="Console"/></logger>
-        <logger name="jdbc.connection" level="WARN"><appender-ref ref="Console"/></logger>
-        <logger name="jdbc.audit" level="WARN"><appender-ref ref="Console"/></logger>-->
         <logger name="com.credan.data.inport" level="INFO" additivity="false">
             <AppenderRef ref="Console" />
         </logger>
@@ -67,7 +32,7 @@
         </logger>
         <Root level="WARN">
             <AppenderRef ref="Console" />
-            <AppenderRef ref="RollingFile" />
+            <AppenderRef ref="File" />
         </Root>
     </Loggers>
 </Configuration>
