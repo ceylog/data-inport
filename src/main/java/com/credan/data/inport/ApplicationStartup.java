@@ -91,8 +91,6 @@ public class ApplicationStartup implements ApplicationListener<ContextRefreshedE
         @Override
         public String call()  {
             logger.info("handler json file {}",path);
-            //String s = readFile(new File(path));
-            //JavaType javaType = mapper.getTypeFactory().constructParametricType(ArrayList.class,Role.class);
 
             File jsonFile = new File(path);
             String type;
