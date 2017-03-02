@@ -77,7 +77,7 @@ public class ApplicationStartup implements ApplicationListener<ContextRefreshedE
                         }
                     }
                 }).start();
-                logger.info("dir is watchd,wait put json text");
+                logger.info("dir {} is watchd,wait put json text",dirPath);
             }
         }
     }
