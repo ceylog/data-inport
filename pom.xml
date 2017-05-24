@@ -14,7 +14,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.5.2.RELEASE</version>
+		<version>1.5.3.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
@@ -206,11 +206,6 @@
 
 	<repositories>
 		<repository>
-			<id>PRIV_NEXUS_REPO</id>
-			<name>priv nexus repo</name>
-			<url>http://192.168.16.200:8081/nexus/content/groups/public</url>
-		</repository>
-		<repository>
 			<id>aliyun_nexus_repo</id>
 			<name>aliyun nexus repo</name>
 			<url>http://maven.aliyun.com/nexus/content/groups/public</url>
@@ -223,11 +218,6 @@
 	</repositories>
 
 	<pluginRepositories>
-		<pluginRepository>
-			<id>PRIV_NEXUS_REPO</id>
-			<name>priv nexus repo</name>
-			<url>http://192.168.16.200:8081/nexus/content/groups/public</url>
-		</pluginRepository>
 		<pluginRepository>
 			<id>aliyun_nexus_repo</id>
 			<name>aliyun nexus repo</name>
